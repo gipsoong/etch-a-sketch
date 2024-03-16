@@ -1,4 +1,11 @@
 div {
     display: flex;
     flex-wrap: wrap;
+    gap: 15px;
+}
+
+.grid-square {
+    background-color: beige;
+    height: 50px;
+    width: 50px;
 }
