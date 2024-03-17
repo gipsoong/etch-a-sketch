@@ -10,7 +10,3 @@ div {
     width: 50px;
     transition-duration: 0.2s;
 }
-
-.grid-square:hover {
-    background-color: rgb(177, 177, 170);
-}

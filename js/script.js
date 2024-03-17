@@ -12,9 +12,12 @@ function createGrid() {
 createGrid();
 
 function changeColor() {
-    console.log('hi');
+    gridSquare.style.backgroundColor = 'black';
 }
 
-let gridSquare = document.querySelectorAll('.grid-square');
+// let gridSquare = document.querySelectorAll('.grid-square');
 // gridSquare.addEventListener('mouseover', changeColor);
-console.log(gridSquare);
+// console.log(gridSquare);
+
+let gridSquare = document.querySelector('.grid-square');
+gridSquare.addEventListener('mouseover', changeColor);
