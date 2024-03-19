@@ -1,14 +1,16 @@
 const container = document.getElementById('grid-container');
 
-function createGrid() {
-    for (i = 1; i <= 256; i++) {
+let baseSize = 256;
+
+function createGrid(size) {
+    for (i = 1; i <= size; i++) {
         const square = document.createElement('div');
         square.classList.add('grid-square');
         container.appendChild(square);
     }
 }
 
-createGrid();
+createGrid(baseSize);
 
 document.getElementById('grid-container').addEventListener('mouseover', e => {
     if (e.target.className === 'grid-square') {
@@ -17,7 +19,11 @@ document.getElementById('grid-container').addEventListener('mouseover', e => {
 });
 
 document.querySelector('button').addEventListener('click', function() {
-    let userInput = prompt('Enter the amount of squares desired on each side of the new grid!');
-
+    let askForSize = prompt('Enter the amount of squares desired on each side of the new grid!');
+    let userInput = askForSize * askForSize;
     container.replaceChildren();
+
+    // console.log(userInput);
+
+    createGrid(userInput);
 })
