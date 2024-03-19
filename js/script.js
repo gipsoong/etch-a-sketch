@@ -15,9 +15,8 @@ function changeColor() {
     gridSquare.style.backgroundColor = 'black';
 }
 
-// let gridSquare = document.querySelectorAll('.grid-square');
-// gridSquare.addEventListener('mouseover', changeColor);
-// console.log(gridSquare);
-
 let gridSquare = document.querySelector('.grid-square');
 gridSquare.addEventListener('mouseover', changeColor);
+
+let gridSquareArray = document.querySelectorAll('.grid-square');
+console.log(gridSquareArray);
