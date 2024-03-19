@@ -5,7 +5,6 @@ function createGrid() {
         const square = document.createElement('div');
         square.classList.add('grid-square');
         container.appendChild(square);
-        // console.log(i);
     }
 }
 
@@ -13,12 +12,12 @@ createGrid();
 
 document.getElementById('grid-container').addEventListener('mouseover', e => {
     if (e.target.className === 'grid-square') {
-        // console.log('hi');
         e.target.style.backgroundColor = 'black';
     }
 });
 
 document.querySelector('button').addEventListener('click', function() {
-    alert('hi');
-})
+    let userInput = prompt('Enter the amount of squares desired on each side of the new grid!');
 
+    container.replaceChildren();
+})
