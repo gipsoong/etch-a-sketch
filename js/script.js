@@ -19,4 +19,6 @@ let gridSquare = document.querySelector('.grid-square');
 gridSquare.addEventListener('mouseover', changeColor);
 
 let gridSquareArray = document.querySelectorAll('.grid-square');
-console.log(gridSquareArray);
+// console.log(gridSquareArray);
+console.log(gridSquareArray.length);
+console.log(gridSquareArray[255]);
