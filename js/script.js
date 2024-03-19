@@ -1,4 +1,4 @@
-const container = document.querySelector('div');
+const container = document.getElementById('grid-container');
 
 function createGrid() {
     for (i = 1; i <= 256; i++) {
@@ -17,3 +17,8 @@ document.getElementById('grid-container').addEventListener('mouseover', e => {
         e.target.style.backgroundColor = 'black';
     }
 });
+
+document.querySelector('button').addEventListener('click', function() {
+    alert('hi');
+})
+
