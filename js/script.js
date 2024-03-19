@@ -13,6 +13,7 @@ createGrid();
 
 document.getElementById('grid-container').addEventListener('mouseover', e => {
     if (e.target.className === 'grid-square') {
-        console.log('hi');
+        // console.log('hi');
+        e.target.style.backgroundColor = 'black';
     }
 });
