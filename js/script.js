@@ -20,5 +20,13 @@ gridSquare.addEventListener('mouseover', changeColor);
 
 let gridSquareArray = document.querySelectorAll('.grid-square');
 // console.log(gridSquareArray);
-console.log(gridSquareArray.length);
-console.log(gridSquareArray[255]);
+// console.log(gridSquareArray.length);
+// console.log(gridSquareArray[255]);
+
+function addMouseOver(array) {
+    for (i = 0; i < array.length; i ++) {
+        console.log(i);
+    }
+}
+
+addMouseOver(gridSquareArray);
