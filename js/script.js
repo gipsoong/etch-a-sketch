@@ -11,22 +11,8 @@ function createGrid() {
 
 createGrid();
 
-function changeColor() {
-    gridSquare.style.backgroundColor = 'black';
-}
-
-let gridSquare = document.querySelector('.grid-square');
-gridSquare.addEventListener('mouseover', changeColor);
-
-let gridSquareArray = document.querySelectorAll('.grid-square');
-// console.log(gridSquareArray);
-// console.log(gridSquareArray.length);
-// console.log(gridSquareArray[255]);
-
-function addMouseOver(array) {
-    for (i = 0; i < array.length; i ++) {
-        console.log(i);
+document.getElementById('grid-container').addEventListener('mouseover', e => {
+    if (e.target.className === 'grid-square') {
+        console.log('hi');
     }
-}
-
-addMouseOver(gridSquareArray);
+});
