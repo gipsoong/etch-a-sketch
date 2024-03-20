@@ -7,7 +7,7 @@ body {
 #grid-container {
     display: flex;
     flex-wrap: wrap;
-    width: 990px;
+    width: 1000px;
     gap: 10px;
 }
 

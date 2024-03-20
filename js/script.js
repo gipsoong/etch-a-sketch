@@ -18,8 +18,13 @@ document.getElementById('grid-container').addEventListener('mouseover', e => {
     }
 });
 
+function getPrompt() {
+    let prompt = prompt('Enter the amount of squares desired on each side of the new grid!');
+}
+
 document.querySelector('button').addEventListener('click', function() {
     let askForSize = prompt('Enter the amount of squares desired on each side of the new grid!');
+    console.log(typeof askForSize);
     let userInput = askForSize * askForSize;
     container.replaceChildren();
 
