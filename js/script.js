@@ -39,3 +39,18 @@ document.querySelector('button').addEventListener('click', function() {
 
     createGrid(askForSize);
 })
+
+let baseSide = 16;
+
+function createGrid2(num) {
+    for (i = 1; i <= baseSide; i ++) {
+        let row = document.createElement('div');
+        row.classList.add('grid-row');
+        
+        for (x = 1; x <= baseSide; x++) {
+            let square2 = document.createElement('div');
+            square2.classList.add('grid-square');
+            row.appendChild(square2);
+        }
+    }
+}
