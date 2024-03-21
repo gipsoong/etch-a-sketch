@@ -18,17 +18,24 @@ document.getElementById('grid-container').addEventListener('mouseover', e => {
     }
 });
 
-function getPrompt() {
-    let prompt = prompt('Enter the amount of squares desired on each side of the new grid!');
+function parsePrompt() {
+    let promptUserInput = prompt('Enter the amount of squares desired on each side of the new grid!');
+
+    if (isNaN(promptUserInput)) {
+        // console.log(promptUserInput);
+        alert('Please enter a number below 100!');
+        return parsePrompt();
+    } else {
+        // console.log(`Is valid, user input ${promptUserInput}`);
+        let userInput = promptUserInput * promptUserInput;
+        console.log(userInput);
+        return userInput;
+    }
 }
 
 document.querySelector('button').addEventListener('click', function() {
-    let askForSize = prompt('Enter the amount of squares desired on each side of the new grid!');
-    console.log(typeof askForSize);
-    let userInput = askForSize * askForSize;
+    let askForSize = parsePrompt();
     container.replaceChildren();
 
-    // console.log(userInput);
-
-    createGrid(userInput);
+    createGrid(askForSize);
 })
