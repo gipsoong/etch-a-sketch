@@ -14,7 +14,7 @@ body {
 }
 
 .grid-square {
-    background-color: beige;
+    background-color: rgb(204, 204, 204);
     height: 25px;
     width: 25px;
     transition-duration: 0.2s;
