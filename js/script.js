@@ -27,13 +27,10 @@ document.getElementById('grid-container').addEventListener('mouseover', e => {
 function parsePrompt() {
     let userInput = prompt('Enter the amount of squares desired on each side of the new grid!');
 
-    if (isNaN(userInput)) {
-        // console.log(promptUserInput);
+    if (isNaN(userInput) || userInput > 100) {
         alert('Please enter a number below 100!');
         return parsePrompt();
     } else {
-        // console.log(`Is valid, user input ${promptUserInput}`);
-        // console.log(promptUserInput);
         return userInput;
     }
 }

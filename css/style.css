@@ -10,13 +10,13 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 1000px;
-    gap: 10px;
+    gap: 5px;
 }
 
 .grid-square {
     background-color: beige;
-    height: 50px;
-    width: 50px;
+    height: 25px;
+    width: 25px;
     transition-duration: 0.2s;
 }
 
@@ -30,5 +30,5 @@ button {
 
 .grid-row {
     display: flex;
-    gap: 10px;
+    gap: 5px;
 }
