@@ -6,7 +6,9 @@ body {
 
 #grid-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     width: 1000px;
     gap: 10px;
 }
@@ -24,4 +26,9 @@ body {
 
 button {
     font-size: larger;
+}
+
+.grid-row {
+    display: flex;
+    gap: 10px;
 }

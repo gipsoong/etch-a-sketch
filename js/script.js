@@ -10,7 +10,7 @@ function createGrid(size) {
     }
 }
 
-createGrid(baseSize);
+// createGrid(baseSize);
 
 document.getElementById('grid-container').addEventListener('mouseover', e => {
     if (e.target.className === 'grid-square') {
@@ -46,6 +46,7 @@ function createGrid2(num) {
     for (i = 1; i <= baseSide; i ++) {
         let row = document.createElement('div');
         row.classList.add('grid-row');
+        container.appendChild(row);
         
         for (x = 1; x <= baseSide; x++) {
             let square2 = document.createElement('div');
@@ -54,3 +55,5 @@ function createGrid2(num) {
         }
     }
 }
+
+createGrid2(baseSide);
