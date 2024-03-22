@@ -1,16 +1,22 @@
 const container = document.getElementById('grid-container');
 
-let baseSize = 256;
+let baseSide = 16;
 
-function createGrid(size) {
-    for (i = 1; i <= size; i++) {
-        const square = document.createElement('div');
-        square.classList.add('grid-square');
-        container.appendChild(square);
+function createGrid(num) {
+    for (i = 1; i <= baseSide; i ++) {
+        let row = document.createElement('div');
+        row.classList.add('grid-row');
+        container.appendChild(row);
+        
+        for (x = 1; x <= baseSide; x++) {
+            let square = document.createElement('div');
+            square.classList.add('grid-square');
+            row.appendChild(square);
+        }
     }
 }
 
-// createGrid(baseSize);
+createGrid(baseSide);
 
 document.getElementById('grid-container').addEventListener('mouseover', e => {
     if (e.target.className === 'grid-square') {
@@ -35,25 +41,7 @@ function parsePrompt() {
 
 document.querySelector('button').addEventListener('click', function() {
     let askForSize = parsePrompt();
-    container.replaceChildren();
-
-    createGrid(askForSize);
+    container.innerHTML = '';
+    
+    createGrid(5);
 })
-
-let baseSide = 16;
-
-function createGrid2(num) {
-    for (i = 1; i <= baseSide; i ++) {
-        let row = document.createElement('div');
-        row.classList.add('grid-row');
-        container.appendChild(row);
-        
-        for (x = 1; x <= baseSide; x++) {
-            let square2 = document.createElement('div');
-            square2.classList.add('grid-square');
-            row.appendChild(square2);
-        }
-    }
-}
-
-createGrid2(baseSide);
